@@ -16,9 +16,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --]]
 
 -- Chisel description
-description = "Shows the top network connections in terms of total (in+out) bandwidth";
-short_description = "top connections by total bytes";
-category = "net";
+description = "Shows the top files in terms of disk usage."
+short_description = "top files by total bytes"
+category = "IO"
 
 -- Chisel argument list
 args = {}
@@ -35,10 +35,10 @@ end
 function on_init()
 	chisel.exec("table_generator", 
 		"fd.name",
-		"Tuple",
+		"Filename",
 		"evt.rawarg.res",
 		"Bytes",
-		"(fd.type=ipv4 or fd.type=ipv6) and evt.is_io=true", 
+		"fd.type=file and evt.is_io=true", 
 		"" .. TOP_NUMBER,
 		"bytes")
 	return true

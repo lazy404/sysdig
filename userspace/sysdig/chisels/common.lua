@@ -1,5 +1,22 @@
+--[[
+
+ 
+This program is free software: you can redistribute it and/or modify
+
+
+
+
+This program is distributed in the hope that it will be useful,
+
+
+
+
+
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+--]]
+
 --[[ 
-A bunch of functions that are helpful in multiple scripts
+This file contains a bunch of functions that are helpful in multiple scripts
 ]]--
 
 --[[ 
@@ -28,6 +45,30 @@ function format_bytes(val)
 		return string.format("%.2fKB", val / (1024))
 	else
 		return string.format("%dB", val)
+	end
+end
+
+--[[ 
+convert a nanosecond time interval into a s.ns representation.
+E.g. 1100000000 becomes 1.1s
+]]--
+ONE_S_IN_NS=1000000000
+ONE_MS_IN_NS=1000000
+ONE_US_IN_NS=1000
+
+function format_time_interval(val)
+	if val >= (ONE_S_IN_NS) then
+		return string.format("%u.%02us", val / ONE_S_IN_NS, (val % ONE_S_IN_NS) / 10000000)
+	elseif val >= (ONE_S_IN_NS / 100) then
+		return string.format("%ums", val / (ONE_S_IN_NS / 1000))
+	elseif val >= (ONE_S_IN_NS / 1000) then
+		return string.format("%u.%02ums", val / (ONE_S_IN_NS / 1000), (val % ONE_MS_IN_NS) / 10000)
+	elseif val >= (ONE_S_IN_NS / 100000) then
+		return string.format("%uus", val / (ONE_S_IN_NS / 1000000))
+	elseif val >= (ONE_S_IN_NS / 1000000) then
+		return string.format("%u.%02uus", val / (ONE_S_IN_NS / 1000000), (val % ONE_US_IN_NS) / 10)
+	else
+		return string.format("%uns", val)
 	end
 end
 

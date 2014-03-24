@@ -21,22 +21,38 @@ short_description = "FD bytes group by"
 category = "IO"
 
 -- Chisel argument list
-args = {}
+args = 
+{
+	{
+		name = "key", 
+		description = "the filter field used for grouping", 
+		argtype = "string"
+	},
+}
+
+-- The number of items to show
+TOP_NUMBER = 0
+key_fld = ""
 
 -- Argument notification callback
 function on_set_arg(name, val)
+	if name == "key" then
+		key_fld = val
+		return true
+	end
+
 	return false
 end
 
 -- Initialization callback
 function on_init()
-	chisel.exec("table_generator", 
-		"proc.name",
-		"Process"
+	chisel.exec("table_generator",
+		key_fld,
+		key_fld,
 		"evt.rawarg.res",
 		"Bytes",
-		"(fd.type=ipv4 or fd.type=ipv6) and evt.is_io=true", 
-		"100",
+		"evt.is_io=true", 
+		"" .. TOP_NUMBER,
 		"bytes")
 	return true
 end
