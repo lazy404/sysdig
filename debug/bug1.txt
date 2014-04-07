@@ -1,0 +1,82 @@
+sysdig-probe: mmap for CPU 0, start=3603739557888 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+ttyS1: 2 input overrun(s)
+sysdig-probe: mmap for CPU 0, start=3603766296576 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 1, start=3603737460736 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 1, start=3603766292480 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 2, start=3603735363584 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 2, start=3603766288384 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: starting capture
+sysdig-probe: mmap for CPU 3, start=3603733266432 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 3, start=3603766284288 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+BUG: scheduling while atomic: sysdig/12322/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12322, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+BUG: scheduling while atomic: sysdig/12322/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12322, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+BUG: scheduling while atomic: sysdig/12322/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12322, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+ [<ffffffff812caa36>] ? retint_swapgs+0xe/0x11
+sysdig-probe: closing ring 0, evt:88086, dr_buf:65630, dr_pf:0, pr:2, cs:26095
+sysdig-probe: closing ring 1, evt:103877, dr_buf:75980, dr_pf:0, pr:2, cs:20185
+sysdig-probe: closing ring 2, evt:132638, dr_buf:110212, dr_pf:0, pr:0, cs:26467
+sysdig-probe: closing ring 3, evt:14311, dr_buf:0, dr_pf:0, pr:2, cs:1267
+sysdig-probe: stopping capture

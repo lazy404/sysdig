@@ -1,0 +1,64 @@
+sysdig-probe: mmap for CPU 0, start=3518365556736 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+ttyS1: 85 input overrun(s)
+sysdig-probe: mmap for CPU 0, start=3518392295424 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 1, start=3518363459584 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 1, start=3518392291328 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 2, start=3518361362432 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 2, start=3518392287232 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: starting capture
+sysdig-probe: mmap for CPU 3, start=3518359265280 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 3, start=3518392283136 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+BUG: scheduling while atomic: sysdig/12375/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12375, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+BUG: scheduling while atomic: sysdig/12375/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12375, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+sysdig-probe: closing ring 0, evt:112490, dr_buf:90697, dr_pf:0, pr:2, cs:37285
+ttyS1: 74 input overrun(s)
+sysdig-probe: closing ring 1, evt:83980, dr_buf:59573, dr_pf:0, pr:2, cs:26690
+sysdig-probe: closing ring 2, evt:206062, dr_buf:179382, dr_pf:0, pr:0, cs:22158
+sysdig-probe: closing ring 3, evt:154056, dr_buf:129377, dr_pf:0, pr:0, cs:42023
+sysdig-probe: stopping capture

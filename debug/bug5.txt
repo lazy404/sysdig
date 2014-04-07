@@ -1,0 +1,518 @@
+21:06.100620976 2 sshd (12303) < rt_sigprocmask
+10927 21:21:06.100621743 2 sshd (12303) > rt_sigprocmask
+10928 21:21:06.100622269 2 sshd (12303) < rt_sigprocmask
+10929 21:21:06.100623300 3 screen (12314) < select res=2
+10930 21:21:06.100623563 2 sshd (12303) > write fd=3(<4t>86.111.240.15:48902->86.111.240.23:22) size=96
+10931 21:21:06.100624145 3 screen (12314) > write fd=3(<f>/dev/pts/10) size=80
+10932 21:21:06.100628950 3 screen (12314) > switch next=7365
+10933 21:21:06.100630251 2 sshd (12303) < write res=96 data=>....~......(...ED..}.;.]\"m..).*..m#V2.............LAnr...J)..Q~..F..L....cF.(..
+10934 21:21:06.100632108 3 <NA> (7365) > switch next=12314(screen)
+10935 21:21:06.100632322 2 sshd (12303) > select
+10936 21:21:06.100632856 3 screen (12314) < write res=80 data=495 21:21:05.636646126 3 screen (12314) > write fd=3(<f>/dev/pts/10) size=143 ..
+10937 21:21:06.100634209 3 screen (12314) > read fd=6(<f>/dev/ptmx) size=4096
+10938 21:21:06.100635785 1 sysdig (12602) > write fd=1(<f>/dev/pts/11) size=78
+10939 21:21:06.100636725 3 screen (12314) < read res=145 data=.496 21:21:05.636649453 3 screen (12314) < write res=143 data=22 21:21:05.580261
+10940 21:21:06.100642134 1 sysdig (12602) > switch next=10597
+^C10941 21:21:06.100644939 1 <NA> (10597) > switch next=12602(sysdig)
+
+
+Apr  7 21:16:48 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=2828893646848 len=2097152 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=2828920385536 len=4096 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=2828891549696 len=2097152 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=2828920381440 len=4096 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=2828889452544 len=2097152 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=2828920377344 len=4096 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=2828887355392 len=2097152 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=2828920373248 len=4096 page_size=4096
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:49 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:93581, dr_buf:71826, dr_pf:0, pr:0, cs:30433
+Apr  7 21:16:50 hegemone-dev kernel: ttyS1: 27 input overrun(s)
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:132152, dr_buf:107872, dr_pf:0, pr:0, cs:44041
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:121718, dr_buf:93438, dr_pf:0, pr:0, cs:12832
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:66081, dr_buf:38933, dr_pf:0, pr:0, cs:7409
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3667407765504 len=2097152 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3667434504192 len=4096 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3667405668352 len=2097152 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3667434500096 len=4096 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3667403571200 len=2097152 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3667434496000 len=4096 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3667401474048 len=2097152 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3667434491904 len=4096 page_size=4096
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:16:50 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:16:51 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:97313, dr_buf:75604, dr_pf:0, pr:0, cs:31469
+Apr  7 21:16:51 hegemone-dev kernel: ttyS1: 1 input overrun(s)
+Apr  7 21:16:51 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:93638, dr_buf:69530, dr_pf:0, pr:0, cs:15874
+Apr  7 21:16:51 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:108629, dr_buf:81503, dr_pf:0, pr:0, cs:11242
+Apr  7 21:16:51 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:132569, dr_buf:105373, dr_pf:1, pr:0, cs:40054
+Apr  7 21:16:51 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=4023840333824 len=2097152 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:11 hegemone-dev kernel: ttyS1: 6 input overrun(s)
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=4023867072512 len=4096 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=4023838236672 len=2097152 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=4023867068416 len=4096 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=4023836139520 len=2097152 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=4023867064320 len=4096 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=4023834042368 len=2097152 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=4023867060224 len=4096 page_size=4096
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:11 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:18 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:979582, dr_buf:905548, dr_pf:0, pr:0, cs:242194
+Apr  7 21:17:18 hegemone-dev kernel: ttyS1: 2 input overrun(s)
+Apr  7 21:17:18 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:794979, dr_buf:725160, dr_pf:1, pr:0, cs:243577
+Apr  7 21:17:18 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:524003, dr_buf:469583, dr_pf:0, pr:0, cs:121840
+Apr  7 21:17:18 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:683941, dr_buf:610280, dr_pf:0, pr:0, cs:194012
+Apr  7 21:17:18 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:17:22 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3610744205312 len=2097152 page_size=4096
+Apr  7 21:17:22 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:22 hegemone-dev kernel: ttyS1: 5 input overrun(s)
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3610770944000 len=4096 page_size=4096
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3610742108160 len=2097152 page_size=4096
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3610770939904 len=4096 page_size=4096
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3610740011008 len=2097152 page_size=4096
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3610770935808 len=4096 page_size=4096
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3610737913856 len=2097152 page_size=4096
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3610770931712 len=4096 page_size=4096
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:23 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:26 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:432361, dr_buf:382087, dr_pf:0, pr:0, cs:97271
+Apr  7 21:17:26 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:143706, dr_buf:94323, dr_pf:0, pr:0, cs:39819
+Apr  7 21:17:26 hegemone-dev kernel: ttyS1: 1 input overrun(s)
+Apr  7 21:17:26 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:191806, dr_buf:157494, dr_pf:0, pr:0, cs:60744
+Apr  7 21:17:26 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:394967, dr_buf:357810, dr_pf:0, pr:0, cs:131664
+Apr  7 21:17:26 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3059853332480 len=2097152 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:32 hegemone-dev kernel: ttyS1: 5 input overrun(s)
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3059880071168 len=4096 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3059851235328 len=2097152 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3059880067072 len=4096 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3059849138176 len=2097152 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3059880062976 len=4096 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3059847041024 len=2097152 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3059880058880 len=4096 page_size=4096
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:32 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:34 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:314836, dr_buf:287368, dr_pf:0, pr:0, cs:50445
+Apr  7 21:17:34 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:216401, dr_buf:192314, dr_pf:0, pr:0, cs:45655
+Apr  7 21:17:34 hegemone-dev kernel: ttyS1: 2 input overrun(s)
+Apr  7 21:17:34 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:253351, dr_buf:231895, dr_pf:0, pr:0, cs:65322
+Apr  7 21:17:34 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:320462, dr_buf:270070, dr_pf:0, pr:0, cs:94959
+Apr  7 21:17:34 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3789323976704 len=2097152 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:35 hegemone-dev kernel: ttyS1: 5 input overrun(s)
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3789350715392 len=4096 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3789321879552 len=2097152 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3789350711296 len=4096 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3789319782400 len=2097152 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3789350707200 len=4096 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3789317685248 len=2097152 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3789350703104 len=4096 page_size=4096
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:35 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:35 hegemone-dev kernel: BUG: scheduling while atomic: sysdig/12574/0x10000001
+Apr  7 21:17:35 hegemone-dev kernel: Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Apr  7 21:17:35 hegemone-dev kernel: Pid: 12574, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Apr  7 21:17:35 hegemone-dev kernel: Call Trace:
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff812c8172>] __schedule+0x98/0x918
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+Apr  7 21:17:35 hegemone-dev kernel: [<ffffffff812caa36>] ? retint_swapgs+0xe/0x11
+Apr  7 21:17:36 hegemone-dev kernel: BUG: scheduling while atomic: sysdig/12574/0x10000001
+Apr  7 21:17:36 hegemone-dev kernel: Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Apr  7 21:17:36 hegemone-dev kernel: Pid: 12574, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Apr  7 21:17:36 hegemone-dev kernel: Call Trace:
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff812c8172>] __schedule+0x98/0x918
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+Apr  7 21:17:36 hegemone-dev kernel: [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+Apr  7 21:17:37 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:104839, dr_buf:80473, dr_pf:0, pr:0, cs:26321
+Apr  7 21:17:37 hegemone-dev kernel: ttyS1: 78 input overrun(s)
+Apr  7 21:17:37 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:194373, dr_buf:173235, dr_pf:0, pr:0, cs:63443
+Apr  7 21:17:37 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:220981, dr_buf:195216, dr_pf:0, pr:4, cs:70510
+Apr  7 21:17:37 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:341523, dr_buf:311261, dr_pf:0, pr:0, cs:36936
+Apr  7 21:17:37 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3499107180544 len=2097152 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:54 hegemone-dev kernel: ttyS1: 1 input overrun(s)
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3499133919232 len=4096 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3499105083392 len=2097152 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3499133915136 len=4096 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3499102986240 len=2097152 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3499133911040 len=4096 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3499100889088 len=2097152 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3499133906944 len=4096 page_size=4096
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:17:54 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:17:55 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:50273, dr_buf:23114, dr_pf:0, pr:0, cs:5743
+Apr  7 21:17:55 hegemone-dev kernel: ttyS1: 21 input overrun(s)
+Apr  7 21:17:55 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:102049, dr_buf:80480, dr_pf:0, pr:0, cs:32771
+Apr  7 21:17:55 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:142934, dr_buf:118810, dr_pf:0, pr:0, cs:47635
+Apr  7 21:17:55 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:153432, dr_buf:126012, dr_pf:0, pr:0, cs:16200
+Apr  7 21:17:55 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3323477991424 len=2097152 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:00 hegemone-dev kernel: ttyS1: 6 input overrun(s)
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3323504730112 len=4096 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3323475894272 len=2097152 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3323504726016 len=4096 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3323473797120 len=2097152 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3323504721920 len=4096 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3323471699968 len=2097152 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3323504717824 len=4096 page_size=4096
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:02 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:163730, dr_buf:140648, dr_pf:0, pr:0, cs:54582
+Apr  7 21:18:02 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:140779, dr_buf:113130, dr_pf:0, pr:0, cs:15568
+Apr  7 21:18:02 hegemone-dev kernel: ttyS1: 2 input overrun(s)
+Apr  7 21:18:02 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:91803, dr_buf:64623, dr_pf:0, pr:0, cs:10288
+Apr  7 21:18:02 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:118683, dr_buf:96104, dr_pf:0, pr:0, cs:37748
+Apr  7 21:18:02 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3582751473664 len=2097152 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:08 hegemone-dev kernel: ttyS1: 5 input overrun(s)
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3582778212352 len=4096 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3582749376512 len=2097152 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3582778208256 len=4096 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3582747279360 len=2097152 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3582778204160 len=4096 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3582745182208 len=2097152 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3582778200064 len=4096 page_size=4096
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:08 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:09 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:171852, dr_buf:147805, dr_pf:0, pr:0, cs:57279
+Apr  7 21:18:09 hegemone-dev kernel: ttyS1: 2 input overrun(s)
+Apr  7 21:18:09 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:142694, dr_buf:113411, dr_pf:0, pr:0, cs:14809
+Apr  7 21:18:09 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:99112, dr_buf:71992, dr_pf:0, pr:0, cs:11140
+Apr  7 21:18:09 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:120197, dr_buf:98625, dr_pf:0, pr:0, cs:38809
+Apr  7 21:18:09 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=2689021906944 len=2097152 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:12 hegemone-dev kernel: ttyS1: 6 input overrun(s)
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=2689048645632 len=4096 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=2689019809792 len=2097152 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=2689048641536 len=4096 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=2689017712640 len=2097152 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=2689048637440 len=4096 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=2689015615488 len=2097152 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=2689048633344 len=4096 page_size=4096
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:18:12 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:18:14 hegemone-dev kernel: BUG: scheduling while atomic: sysdig/12583/0x10000001
+Apr  7 21:18:14 hegemone-dev kernel: Modules linked in: crc32c nfnetlink_log
+Apr  7 21:18:14 hegemone-dev kernel: ttyS1: 2 input overrun(s)
+Apr  7 21:18:14 hegemone-dev kernel: sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Apr  7 21:18:14 hegemone-dev kernel: Pid: 12583, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Apr  7 21:18:14 hegemone-dev kernel: Call Trace:
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812c8172>] __schedule+0x98/0x918
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+Apr  7 21:18:14 hegemone-dev kernel: BUG: scheduling while atomic: sysdig/12583/0x10000001
+Apr  7 21:18:14 hegemone-dev kernel: Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Apr  7 21:18:14 hegemone-dev kernel: Pid: 12583, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Apr  7 21:18:14 hegemone-dev kernel: Call Trace:
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812c8172>] __schedule+0x98/0x918
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+Apr  7 21:18:14 hegemone-dev kernel: [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+Apr  7 21:18:15 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:182431, dr_buf:160116, dr_pf:0, pr:2, cs:60369
+Apr  7 21:18:15 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:115297, dr_buf:88319, dr_pf:0, pr:0, cs:13813
+Apr  7 21:18:15 hegemone-dev kernel: ttyS1: 61 input overrun(s)
+Apr  7 21:18:15 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:150181, dr_buf:127878, dr_pf:0, pr:2, cs:26862
+Apr  7 21:18:15 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:143690, dr_buf:115986, dr_pf:0, pr:0, cs:35110
+Apr  7 21:18:15 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:20:45 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3360560091136 len=2097152 page_size=4096
+Apr  7 21:20:45 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:45 hegemone-dev kernel: ttyS1: 6 input overrun(s)
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3360586829824 len=4096 page_size=4096
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3360557993984 len=2097152 page_size=4096
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3360586825728 len=4096 page_size=4096
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3360555896832 len=2097152 page_size=4096
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3360586821632 len=4096 page_size=4096
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3360553799680 len=2097152 page_size=4096
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3360586817536 len=4096 page_size=4096
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:46 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:47 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:67, dr_buf:0, dr_pf:0, pr:0, cs:23
+Apr  7 21:20:47 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:28626, dr_buf:1775, dr_pf:0, pr:0, cs:2795
+Apr  7 21:20:47 hegemone-dev kernel: ttyS1: 21 input overrun(s)
+Apr  7 21:20:47 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:16241, dr_buf:0, dr_pf:0, pr:0, cs:5156
+Apr  7 21:20:47 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:15744, dr_buf:0, dr_pf:0, pr:0, cs:4490
+Apr  7 21:20:47 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3244709355520 len=2097152 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:52 hegemone-dev kernel: ttyS1: 6 input overrun(s)
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3244736094208 len=4096 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3244707258368 len=2097152 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3244736090112 len=4096 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3244705161216 len=2097152 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3244736086016 len=4096 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3244703064064 len=2097152 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3244736081920 len=4096 page_size=4096
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:20:52 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:20:56 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:337901, dr_buf:292009, dr_pf:0, pr:0, cs:110565
+Apr  7 21:20:56 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:515459, dr_buf:469052, dr_pf:0, pr:0, cs:156449
+Apr  7 21:20:56 hegemone-dev kernel: ttyS1: 1 input overrun(s)
+Apr  7 21:20:56 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:343301, dr_buf:296038, dr_pf:0, pr:0, cs:112220
+Apr  7 21:20:56 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:383510, dr_buf:329750, dr_pf:0, pr:0, cs:56890
+Apr  7 21:20:56 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3503511306240 len=2097152 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:00 hegemone-dev kernel: ttyS1: 5 input overrun(s)
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3503538044928 len=4096 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3503509209088 len=2097152 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3503538040832 len=4096 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3503507111936 len=2097152 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3503538036736 len=4096 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3503505014784 len=2097152 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3503538032640 len=4096 page_size=4096
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:00 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:01 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:46712, dr_buf:18823, dr_pf:0, pr:0, cs:5170
+Apr  7 21:21:01 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:106718, dr_buf:79501, dr_pf:0, pr:0, cs:19694
+Apr  7 21:21:01 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:100160, dr_buf:76028, dr_pf:0, pr:0, cs:33373
+Apr  7 21:21:01 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:69776, dr_buf:47701, dr_pf:0, pr:0, cs:14536
+Apr  7 21:21:01 hegemone-dev kernel: sysdig-probe: stopping capture
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3008819953664 len=2097152 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:05 hegemone-dev kernel: ttyS1: 2 input overrun(s)
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 0, start=3008846692352 len=4096 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3008817856512 len=2097152 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 1, start=3008846688256 len=4096 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3008815759360 len=2097152 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 2, start=3008846684160 len=4096 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: starting capture
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3008813662208 len=2097152 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the data buffer
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mmap for CPU 3, start=3008846680064 len=4096 page_size=4096
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: mapping the ring info
+Apr  7 21:21:05 hegemone-dev kernel: sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+Apr  7 21:21:05 hegemone-dev kernel: BUG: scheduling while atomic: sysdig/12602/0x10000001
+Apr  7 21:21:05 hegemone-dev kernel: Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Apr  7 21:21:05 hegemone-dev kernel: Pid: 12602, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Apr  7 21:21:05 hegemone-dev kernel: Call Trace:
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812c8172>] __schedule+0x98/0x918
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+Apr  7 21:21:05 hegemone-dev kernel: BUG: scheduling while atomic: sysdig/12602/0x10000001
+Apr  7 21:21:05 hegemone-dev kernel: Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Apr  7 21:21:05 hegemone-dev kernel: Pid: 12602, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Apr  7 21:21:05 hegemone-dev kernel: Call Trace:
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812c8172>] __schedule+0x98/0x918
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+Apr  7 21:21:05 hegemone-dev kernel: [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+Apr  7 21:21:06 hegemone-dev kernel: sysdig-probe: closing ring 0, evt:51976, dr_buf:28838, dr_pf:0, pr:0, cs:17311
+Apr  7 21:21:06 hegemone-dev kernel: sysdig-probe: closing ring 1, evt:99949, dr_buf:73396, dr_pf:0, pr:2, cs:13415
+Apr  7 21:21:06 hegemone-dev kernel: sysdig-probe: closing ring 2, evt:29978, dr_buf:3132, dr_pf:0, pr:0, cs:2428
+Apr  7 21:21:06 hegemone-dev kernel: sysdig-probe: closing ring 3, evt:59692, dr_buf:36627, dr_pf:0, pr:2, cs:18160
+Apr  7 21:21:06 hegemone-dev kernel: sysdig-probe: stopping capture

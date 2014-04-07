@@ -1,0 +1,93 @@
+sysdig-probe: mmap for CPU 0, start=3306645618688 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+ttyS1: 6 input overrun(s)
+sysdig-probe: mmap for CPU 0, start=3306672357376 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 1, start=3306643521536 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 1, start=3306672353280 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 2, start=3306641424384 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 2, start=3306672349184 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: starting capture
+sysdig-probe: mmap for CPU 3, start=3306639327232 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 3, start=3306672345088 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: closing ring 0, evt:745819, dr_buf:649547, dr_pf:0, pr:0, cs:216399
+sysdig-probe: closing ring 1, evt:642890, dr_buf:570316, dr_pf:0, pr:0, cs:196249
+ttyS1: 21 input overrun(s)
+sysdig-probe: closing ring 2, evt:974846, dr_buf:902246, dr_pf:0, pr:0, cs:314147
+sysdig-probe: closing ring 3, evt:1016597, dr_buf:916189, dr_pf:0, pr:0, cs:260144
+sysdig-probe: stopping capture
+sysdig-probe: mmap for CPU 0, start=3836386271232 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+ttyS1: 2 input overrun(s)
+sysdig-probe: mmap for CPU 0, start=3836413009920 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 1, start=3836384174080 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 1, start=3836413005824 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 2, start=3836382076928 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 2, start=3836413001728 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: starting capture
+sysdig-probe: mmap for CPU 3, start=3836379979776 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 3, start=3836412997632 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+BUG: scheduling while atomic: sysdig/12419/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12419, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+BUG: scheduling while atomic: sysdig/12419/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12419, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff8101c4be>] ? do_page_fault+0x447/0x448
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+sysdig-probe: closing ring 0, evt:836295, dr_buf:739415, dr_pf:0, pr:0, cs:272002
+sysdig-probe: closing ring 1, evt:1135836, dr_buf:1034631, dr_pf:0, pr:2, cs:295052
+ttyS1: 80 input overrun(s)
+sysdig-probe: closing ring 2, evt:936229, dr_buf:861966, dr_pf:0, pr:0, cs:290368
+sysdig-probe: closing ring 3, evt:743890, dr_buf:668572, dr_pf:0, pr:1, cs:197533
+sysdig-probe: stopping capture

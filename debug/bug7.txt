@@ -1,0 +1,65 @@
+9232 21:25:30.890580150 1 screen (12314) > switch next=10597
+9233 21:25:30.890585399 0 sysdig (12655) > write fd=1(<f>/dev/pts/11) size=56
+9234 21:25:30.890586748 1 <NA> (10597) > switch next=12314(screen)
+9235 21:25:30.890587662 1 screen (12314) < write res=243 data=485 21:25:30.621073470 3 <NA> (7365) > switch next=12605(sshd) ..486 21:25:30.62
+9236 21:25:30.890589042 2 <NA> (0) > switch next=12605(sshd)
+9237 21:25:30.890589553 1 screen (12314) > select
+9238 21:25:30.890591530 0 sysdig (12655) > switch next=11803
+9239 21:25:30.890594606 2 sshd (12605) < select res=1
+9240 21:25:30.890594613 0 <NA> (11803) > switch next=12655(sysdig)
+9241 21:25:30.890595485 0 sysdig (12655) < write res=56 data=489 21:25:30.621077951 3 sshd (12605) < rt_sigprocmask .
+9242 21:25:30.890595741 2 sshd (12605) > rt_sigprocmask
+9243 21:25:30.890596282 2 sshd (12605) < rt_sigprocmask
+9244 21:25:30.890596944 2 sshd (12605) > rt_sigprocmask
+9245 21:25:30.890597294 2 sshd (12605) < rt_sigprocmask
+9246 21:25:30.890598316 2 sshd (12605) > read fd=9(<f>/dev/ptmx) size=16384
+9247 21:25:30.890600598 1 screen (12314) < select res=1
+9248 21:25:30.890601730 1 screen (12314) > read fd=6(<f>/dev/ptmx) size=4096
+^C9249 21:25:30.890602072 2 sshd (12605) < read res=243 data=485 21:25:30.621073470 3 <NA> (7365) > switch next=12605(sshd) ..486 21:25:30.62
+
+dmesg -c
+sysdig-probe: mmap for CPU 0, start=3637899173888 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+ttyS1: 5 input overrun(s)
+sysdig-probe: mmap for CPU 0, start=3637925912576 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 1, start=3637897076736 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 1, start=3637925908480 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: mmap for CPU 2, start=3637894979584 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 2, start=3637925904384 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+sysdig-probe: starting capture
+sysdig-probe: mmap for CPU 3, start=3637892882432 len=2097152 page_size=4096
+sysdig-probe: mapping the data buffer
+sysdig-probe: mmap for CPU 3, start=3637925900288 len=4096 page_size=4096
+sysdig-probe: mapping the ring info
+sysdig-probe: PPM_IOCTL_DISABLE_DROPPING_MODE
+BUG: scheduling while atomic: sysdig/12655/0x10000001
+Modules linked in: crc32c nfnetlink_log sysdig_probe(O) xt_limit ipt_REJECT xt_addrtype xt_owner xt_tcpudp xt_set ip_set_hash_ip ip_set nfnetlink iptable_filter ip_tables x_tables quota_v2 quota_tree iscsi_tcp libiscsi_tcp libiscsi scsi_transport_iscsi nfs nfs_acl auth_rpcgss fscache lockd sunrpc ipmi_devintf ipmi_si ipmi_msghandler loop sr_mod dcdbas evdev button ext4 crc16 jbd2 dm_mod md_mod ide_cd_mod cdrom ata_piix libata ide_pci_generic usb_storage usbhid sg sd_mod uhci_hcd bnx2 piix ide_core megaraid_sas scsi_mod ehci_hcd [last unloaded: scsi_wait_scan]
+Pid: 12655, comm: sysdig Tainted: G           O 3.2.56-grsec #1
+Call Trace:
+ [<ffffffff812c3a32>] __schedule_bug+0x51/0x55
+ [<ffffffff812c8172>] __schedule+0x98/0x918
+ [<ffffffff812cabff>] ? page_fault+0x1f/0x30
+ [<ffffffff8102c88c>] __cond_resched+0x1c/0x28
+ [<ffffffff812c8a55>] _cond_resched+0x23/0x2a
+ [<ffffffffa03fc20c>] ppm_strncpy_from_user+0x9a/0x151 [sysdig_probe]
+ [<ffffffffa0401680>] ? f_sys_generic+0x2652/0x26833 [sysdig_probe]
+ [<ffffffffa03fce7f>] f_sys_autofill+0xd5/0x312 [sysdig_probe]
+ [<ffffffff810d53c1>] ? user_path_at_empty+0x67/0x97
+ [<ffffffffa03fb4ba>] record_event+0x20c/0x2ec [sysdig_probe]
+ [<ffffffffa03fb643>] syscall_exit_probe+0x5b/0x5d [sysdig_probe]
+ [<ffffffff8100cf3b>] syscall_trace_leave+0x3e/0x137
+ [<ffffffff810cc0c8>] ? sys_newstat+0x27/0x30
+ [<ffffffff812ca6ec>] int_check_syscall_exit_work+0x30/0x39
+sysdig-probe: closing ring 0, evt:54759, dr_buf:31597, dr_pf:0, pr:0, cs:18228
+sysdig-probe: closing ring 1, evt:41562, dr_buf:19199, dr_pf:0, pr:2, cs:10585
+sysdig-probe: closing ring 2, evt:23828, dr_buf:0, dr_pf:0, pr:0, cs:2746
+sysdig-probe: closing ring 3, evt:39272, dr_buf:11745, dr_pf:0, pr:0, cs:4423
+sysdig-probe: stopping capture
